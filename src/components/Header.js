@@ -5,22 +5,25 @@ import ThemeToggle from './ThemeToggle';
 function Header({ darkMode, toggleDarkMode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <header className="fixed w-full bg-white dark:bg-black shadow-md z-10 transition-colors duration-300">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-gray-900 dark:text-white">
-          Full-Stack developer
+      return (
+    <header className="fixed w-full bg-[#191A21] shadow-lg z-50 font-mono border-b border-[#454368] py-3">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <Link to="/" className="text-xl font-mono text-[#F8F8F2] hover:text-[#B392F0] transition-colors duration-300 flex items-center gap-2">
+          <span className="text-[#FF79C6]">const</span>
+          <span className="text-[#82AAFF]">developer</span>
+          <span className="text-[#F8F8F2]">=</span>
+          <span>"Full-Stack";</span>
         </Link>
-        <div className="flex items-center space-x-4">
-          <nav className="hidden md:flex space-x-4">
-            <a href="#about" className="text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400">
-              About
+        <div className="flex items-center space-x-6">
+          <nav className="hidden md:flex space-x-6">
+            <a href="#about" className="text-[#F8F8F2] hover:text-[#B392F0] transition-colors duration-300">
+              <span className="text-[#FF79C6]">import</span> About
             </a>
-            <a href="#projects" className="text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400">
-              Projects
+            <a href="#projects" className="text-[#F8F8F2] hover:text-[#B392F0] transition-colors duration-300">
+              <span className="text-[#82AAFF]">view</span> Projects
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400">
-              Contact
+            <a href="#contact" className="text-[#F8F8F2] hover:text-[#B392F0] transition-colors duration-300">
+              <span className="text-[#FF79C6]">await</span> Contact
             </a>
           </nav>
           <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
@@ -46,27 +49,27 @@ function Header({ darkMode, toggleDarkMode }) {
         </button>
       </div>
       {isMenuOpen && (
-        <nav className="md:hidden bg-white dark:bg-black px-4 py-2">
+        <nav className="md:hidden bg-[#191A21] px-4 py-2 border-t border-[#454368]">
           <a
             href="#about"
-            className="block py-2 text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400"
+            className="block py-2 text-[#F8F8F2] hover:text-[#B392F0] transition-colors duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
-            About
+            <span className="text-[#FF79C6]">import</span> About
           </a>
           <a
             href="#projects"
-            className="block py-2 text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400"
+            className="block py-2 text-[#F8F8F2] hover:text-[#B392F0] transition-colors duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
-            Projects
+            <span className="text-[#82AAFF]">view</span> Projects
           </a>
           <a
             href="#contact"
-            className="block py-2 text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400"
+            className="block py-2 text-[#F8F8F2] hover:text-[#B392F0] transition-colors duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
-            Contact
+            <span className="text-[#FF79C6]">await</span> Contact
           </a>
         </nav>
       )}
