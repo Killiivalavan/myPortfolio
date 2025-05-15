@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <Router basename="/Portfolio">
+    <Router>
       <div className="App bg-white dark:bg-black min-h-screen transition-colors duration-300">
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
