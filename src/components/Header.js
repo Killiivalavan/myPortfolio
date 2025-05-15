@@ -24,7 +24,7 @@ function Header({ darkMode, toggleDarkMode }) {
             </a>
             <a href="#contact" className="text-[#F8F8F2] hover:text-[#B392F0] transition-colors duration-300">
               <span className="text-[#FF79C6]">await</span> Contact
-            </a>
+            </a>    
           </nav>
           <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
